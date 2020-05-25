@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="177dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/trivia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/trivial" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="8dp"
+        app:contentPadding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <TextView
+            android:id="@+id/question_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/question_color"
+            android:textSize="14sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/back_button"-->
+    <!--        android:layout_width="45dp"-->
+    <!--        android:layout_height="45dp"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:background="@color/colorPrimary"-->
+    <!--        android:contentDescription="@string/back_text"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/true_button"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/cardview"-->
+    <!--        app:srcCompat="@android:drawable/ic_media_previous" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/next_button"-->
+    <!--        android:layout_width="45dp"-->
+    <!--        android:layout_height="45dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:background="@color/colorPrimary"-->
+    <!--        android:contentDescription="@string/next_text"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/false_button"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/cardview"-->
+    <!--        app:srcCompat="@android:drawable/ic_media_next" />-->
+
+    <Button
+        android:id="@+id/true_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/true_text"
+        app:layout_constraintEnd_toStartOf="@+id/false_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
+    <Button
+        android:id="@+id/false_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/false_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/true_button"
+        app:layout_constraintTop_toBottomOf="@+id/cardview" />
+
+    <TextView
+        android:id="@+id/counter_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/counter"
+        android:textColor="@color/question_color"
+        app:layout_constraintBottom_toTopOf="@+id/cardview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/score_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/score_text"
+        android:textColor="@color/question_color"
+        app:layout_constraintBottom_toTopOf="@+id/cardview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/highScore_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/question_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/share_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/share_score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/false_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

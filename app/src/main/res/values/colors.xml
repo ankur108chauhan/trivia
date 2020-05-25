@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#202125</color>
+    <color name="colorPrimaryDark">#202125</color>
+    <color name="colorAccent">#202125</color>
+    <color name="redbackground">#8b0000</color>
+    <color name="background">#225195</color>
+    <color name="card_background">#202125</color>
+    <color name="question_color">#FFFFFF</color>
+    <color name="true_color1">#008577</color>
+    <color name="true_color">#00574B</color>
+    <color name="false_color">#C70000</color>
+
+</resources>
